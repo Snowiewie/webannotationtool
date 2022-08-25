@@ -7,7 +7,7 @@ $_SESSION["auth_type"] = "config"; // keep it as
 $sname = "localhost";
 $uname = "root";
 $password = "";
-
+$db_name = "heroku_dae2d78a90708c9";
 
 
 $mysqli -> select_db ("heroku_dae2d78a90708c9");

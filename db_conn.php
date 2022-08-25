@@ -1,17 +1,26 @@
 <?php
-$url = getenv('JAWSDB_URL');
-$dbparts = parse_url($url);
-$database = ltrim($dbparts['path'],'/');
 
-$sname = "localhost";
-$uname = "root";
-$password = "";
+$_SESSION["host"] = "us-cdbr-east-06.cleardb.net"; //provide hostname
+$_SESSION["user"] = "ba1fc85c5d5566"; //user name for your remote server
+$_SESSION["password"] = "2b011857"; //password
+$_SESSION["auth_type"] = "config"; // keep it as
 
-$db_name = "my_db";
 
-$conn = mysqli_connect($sname, $uname, $password, $db_name);
+$db_name = "ClearDB";
 
-if (!$conn) {
-	echo "Connection Failed!";
-	exit();
-}
+$function db_conn() {
+
+        $conn = new mysqli($_SESSION["host"], $_SESSION["user"], $_SESSION["password"], $_SESSION["auth_type"]);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+
+        // Test if connection succeeded
+        if(mysqli_connect_errno()) {
+            die("Database connection failed: " . 
+                 mysqli_connect_error() . 
+                 " (" . mysqli_connect_errno() . ")"
+            );
+        }
+    }

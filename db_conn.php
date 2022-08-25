@@ -6,7 +6,7 @@ $_SESSION["password"] = "2b011857"; //password
 $_SESSION["auth_type"] = "config"; // keep it as
 
 
-$db_name = "db_conn";
+$db_name = "heroku_dae2d78a90708c9";
 
 $function db_conn() {
 

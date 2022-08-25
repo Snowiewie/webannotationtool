@@ -8,7 +8,7 @@ $_SESSION["auth_type"] = "config"; // keep it as
 
 $db_name = "heroku_dae2d78a90708c9";
 
-$function db_conn() {
+
 
         $conn = new mysqli($_SESSION["host"], $_SESSION["user"], $_SESSION["password"], $_SESSION["auth_type"]);
 
@@ -24,3 +24,4 @@ $function db_conn() {
             );
         }
     }
+?>

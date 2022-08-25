@@ -6,7 +6,7 @@ $_SESSION["password"] = "2b011857"; //password
 $_SESSION["auth_type"] = "config"; // keep it as
 
 
-$db_name = "ClearDB";
+$db_name = "db_conn";
 
 $function db_conn() {
 

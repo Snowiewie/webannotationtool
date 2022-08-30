@@ -8,7 +8,7 @@ $_SESSION["user"] = "ba1fc85c5d5566"; //user name for your remote server
 $_SESSION["password"] = "2b011857"; //password
 $_SESSION["auth_type"] = "config"; // keep it as
 
-        $conn = mysqli_connect($sname, $uname, $password, $db_name);
+        $conn = new mysqli($sname, $uname, $password, $db_name);
         // $conn = new mysqli($_SESSION["host"], $_SESSION["user"], $_SESSION["password"], $_SESSION["auth_type"]);
 
         // Check connection

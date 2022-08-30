@@ -1,5 +1,6 @@
 <?php 
    session_start();
+include "db_conn.php";
    if (!isset($_SESSION['username']) && !isset($_SESSION['id'])) { //Get Heroku ClearDB connection information
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $cleardb_server = $cleardb_url["host"];

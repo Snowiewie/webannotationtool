@@ -10,15 +10,24 @@ $_SESSION["auth_type"] = "config"; // keep it as
 
 
         // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
+        //if ($conn->connect_error) {
+            //die("Connection failed: " . $conn->connect_error);
 
         // Test if connection succeeded
-        if(mysqli_connect_errno()) {
-            die("Database connection failed: " . 
-                 mysqli_connect_error() . 
+        //if(mysqli_connect_errno()) {
+            //die("Database connection failed: " . 
+                
+            //);
+       // }
+   // }
+
+//OR Method 2:
+mysqli_report(MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ALL);
+
+try {
+    $db = new mysqli($sname, $uname, $password, $db_name);
+} catch (mysqli_sql_exception $e) {
+   mysqli_connect_error() . 
                  " (" . mysqli_connect_errno() . ")"
-            );
-        }
-    }
+}
 ?>

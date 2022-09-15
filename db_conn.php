@@ -11,11 +11,11 @@ $_SESSION["auth_type"] = "config"; // keep it as
 
          Check connection
         if ($conn->connect_error) {
-            //die("Connection failed: " . $conn->connect_error);
+            die("Connection failed: " . $conn->connect_error);
 
          Test if connection succeeded
        if(mysqli_connect_errno()) {
-            //die("Database connection failed: " . 
+            die("Database connection failed: " . 
                 
            );
         }

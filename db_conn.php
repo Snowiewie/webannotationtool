@@ -6,7 +6,7 @@ $_SESSION["password"] = "2b011857"; //password
 $_SESSION["auth_type"] = "config"; // keep it as
 
         // $conn = new mysqli($sname, $uname, $password, $db_name);
-        $conn = mysqli_connect($_SESSION["host"], $_SESSION["user"], $_SESSION["password"], $_SESSION["auth_type"]);
+       // $conn = mysqli_connect($_SESSION["host"], $_SESSION["user"], $_SESSION["password"], $_SESSION["auth_type"]);
 
 
         // Check connection
